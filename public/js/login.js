@@ -1,4 +1,4 @@
-const signUpBtn = document.getElementById('signup-button');
+
 const loginBtn = document.getElementById('login-button');
 
 
@@ -33,10 +33,10 @@ const signupFormHandler = async (event) => {
     event.preventDefault();
   
 
-    const email = document.querySelector('#email-signup').value.trim();
+    const userName = document.querySelector('#user-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
   
-    if (email && password) {
+    if (userName && password) {
       const response = await fetch('/api/users', {
         method: 'POST',
         body: JSON.stringify({ email, password }),
@@ -51,4 +51,4 @@ const signupFormHandler = async (event) => {
     }
   };
 
-  signUpBtn.addEventListener('click', signupFormHandler);
+  document.querySelector('#signup-button').addEventListener('click', signupFormHandler);

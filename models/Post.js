@@ -5,12 +5,12 @@ class Post extends Model {}
 
 Post.init(
   {
-    Title: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     content: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING,
     },
     user_id: {
       type: DataTypes.INTEGER,
